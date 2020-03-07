@@ -6,7 +6,8 @@ using UnityEngine.Tilemaps;
 public class TileEditor : MonoBehaviour
 {
 
-    public Tilemap world;
+    public Tilemap worldGround;
+    public Tilemap worldObject;
 
     // Update is called once per frame
     void Update()
@@ -14,16 +15,16 @@ public class TileEditor : MonoBehaviour
         if (Input.GetKey(KeyCode.Mouse0))
         {
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector3Int cellPosition = world.layoutGrid.WorldToCell(pos);
+            Vector3Int cellPosition = worldObject.layoutGrid.WorldToCell(pos);
 
-            world.SetTile(cellPosition, Hotbar.setTile);
+            worldObject.SetTile(cellPosition, Hotbar.setTile);
         }
         if (Input.GetKey(KeyCode.Mouse1))
         {
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector3Int cellPosition = world.layoutGrid.WorldToCell(pos);
+            Vector3Int cellPosition = worldObject.layoutGrid.WorldToCell(pos);
             
-            world.SetTile(cellPosition, null);
+            worldObject.SetTile(cellPosition, null);
         }
     }
 }

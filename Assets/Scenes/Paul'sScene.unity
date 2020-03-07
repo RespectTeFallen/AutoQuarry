@@ -477,8 +477,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3734dfe3387b1e48870e782dca0967a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  world: {fileID: 1718145722}
-  selectedTile: {fileID: 11400000, guid: 55c843454b485c94d9ba83e0f62414fb, type: 2}
+  worldGround: {fileID: 1718145722}
+  worldObject: {fileID: 266179059}
 --- !u!1 &266179056
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,7 +491,7 @@ GameObject:
   - component: {fileID: 266179059}
   - component: {fileID: 266179058}
   m_Layer: 9
-  m_Name: Tilemap
+  m_Name: TilemapObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -548,7 +548,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -1016,7 +1016,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!156049354 &725172025
 Grid:
   m_ObjectHideFlags: 0
@@ -1107,7 +1107,7 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
-  m_UseSpriteMesh: 1
+  m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1072381753
 CanvasRenderer:
@@ -2569,7 +2569,7 @@ GameObject:
   - component: {fileID: 1718145722}
   - component: {fileID: 1718145721}
   m_Layer: 8
-  m_Name: Tilemap
+  m_Name: TilemapGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
